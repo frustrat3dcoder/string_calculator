@@ -3,15 +3,6 @@ import 'package:test/test.dart';
 import 'package:string_calculator/string_calculator.dart';
 
 
-// Empty String Returns 0
-// Single Number Returns the Number
-// Two Comma SeparatedNumbers Returns the Sum
-// Handle any amount of numbers
-// Handle new lines between numbers instead of commas
-// Support different delimiters
-// ; delimiter returns 3
-// negative numbers throw exception - Negative numbers not allowed: -1
-
 // Sample Input Examples:
 // Input: “”, Output: 0
 // Input: “1”, Output: 1
