@@ -18,7 +18,7 @@ class StringCalculator {
     }
 
     String delimiter = r'[,\n]';
-    String numberString = numbers;
+    String numbersString = numbers;
 
     // Check for custom delimiter format: //[delimiter]\n    
     if(numbers.startsWith("//")) {

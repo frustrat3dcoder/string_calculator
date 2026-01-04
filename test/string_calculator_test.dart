@@ -40,8 +40,8 @@ void main() {
       expect(stringCalculator.add('1\n2,3'), 6);
     });
 
-    test('should support custom delimiters', () {
-      expect(stringCalculator.add('//;1;2'), 3);
+   test('should support custom delimiters', () {
+      expect(stringCalculator.add('//;\n1;2'), equals(3));
     });
     
     test('should throw an exception for negative numbers', () {
