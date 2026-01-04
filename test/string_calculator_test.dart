@@ -20,21 +20,37 @@ void main() {
 
   group('StringCalculator', () {
 
-    test('should return 0 for empty string', () {});
+    test('should return 0 for empty string', () {
+      expect(stringCalculator.add(''), 0);
+    });
 
-    test('should return the number for single number', () {});
+    test('should return the number for single number', () {
+      expect(stringCalculator.add('1'), 1);
+    });
 
-    test('should return the sum of two comma separated numbers', () {});
+    test('should return the sum of two comma separated numbers', () {
+      expect(stringCalculator.add('1,2'), 3);
+    });
 
-    test('should return any amount of numbers', () {});
+    test('should return any amount of numbers', () {
+      expect(stringCalculator.add('1,2,3'), 6);
+    });
 
-    test('should handle new lines between numbers', () {});
+    test('should handle new lines between numbers', () {
+      expect(stringCalculator.add('1\n2,3'), 6);
+    });
 
-    test('should support custom delimiters', () {});
+    test('should support custom delimiters', () {
+      expect(stringCalculator.add('//;1;2'), 3);
+    });
     
-    test('should throw an exception for negative numbers', () {});
+    test('should throw an exception for negative numbers', () {
+      expect(() => stringCalculator.add('-1'), throwsException);
+    });
 
-    test('should show all negative numbers in exception message', () {});
+    test('should show all negative numbers in exception message', () {
+      expect(() => stringCalculator.add('-1,-2'), throwsException);
+    });
 
   });
 
